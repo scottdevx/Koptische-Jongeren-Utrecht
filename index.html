@@ -8,8 +8,26 @@
         body {
             margin: 0;
             background-color: #f6f1e8;
-            font-family: "Georgia", serif;
+            font-family: Georgia, serif;
             color: #2e2e2e;
+        }
+
+        nav {
+            background-color: #3e2a63;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 15px;
+            letter-spacing: 1px;
+        }
+
+        nav a:hover {
+            color: #c7a84a;
         }
 
         .hero {
@@ -18,19 +36,19 @@
         }
 
         .logo {
-            width: 220px;
-            margin-bottom: 30px;
+            width: 200px;
+            margin-bottom: 25px;
         }
 
         h1 {
-            font-size: 38px;
+            font-size: 36px;
             color: #3e2a63;
             margin: 0;
         }
 
         .tagline {
             font-size: 18px;
-            margin-top: 15px;
+            margin-top: 12px;
             color: #6a5c8f;
         }
 
@@ -51,56 +69,146 @@
         h2 {
             color: #3e2a63;
             margin-bottom: 20px;
-    
         }
-        .wistjedat {
-    background-color: #ede6d6;
-    border-left: 4px solid #c7a84a;
-    padding: 20px;
-    margin-top: 30px;
-    border-radius: 6px;
-}
 
+        .wistjedat {
+            background-color: #ede6d6;
+            border-left: 4px solid #c7a84a;
+            padding: 20px;
+            margin-top: 30px;
+            border-radius: 6px;
+        }
+
+        .contact {
+            background-color: #f0eadc;
+            border-radius: 8px;
+        }
+
+        .social-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 15px;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: #3e2a63;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 25px;
+        }
+
+        .button:hover {
+            background-color: #2c1d47;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: #3e2a63;
+            color: white;
+            margin-top: 60px;
+        }
     </style>
 </head>
 
 <body>
 
-    <div class="hero">
-        <img src="logo.png" class="logo">
-        <h1>✝ Koptische Jongeren Utrecht</h1>
-        <div class="tagline">Een plek van geloof en gemeenschap</div>
-        <div class="divider"></div>
+<nav>
+    <a href="#welkom">Welkom</a>
+    <a href="#traditie">Traditie</a>
+    <a href="#vrijdag">Vrijdagavond</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<div class="hero" id="welkom">
+    <img src="logo.png" class="logo">
+    <h1>✝ Koptische Jongeren Utrecht</h1>
+    <div class="tagline">Een plek van geloof en gemeenschap</div>
+    <div class="divider"></div>
+</div>
+
+<section>
+    <h2>Welkom</h2>
+    <p>
+        Wij zijn een gemeenschap van jongeren die samenkomen in geloof,
+        verbondenheid en groei. Vanuit de rijke Koptisch-Orthodoxe traditie
+        zoeken wij verdieping, vriendschap en een levende relatie met Christus.
+    </p>
+</section>
+
+<section id="traditie">
+    <h2>De Koptische traditie</h2>
+    <p>
+        De Koptisch-Orthodoxe Kerk behoort tot de oudste christelijke tradities ter wereld.
+        De Kerk werd rond het jaar 42 na Christus in Alexandrië gesticht door de evangelist Marcus.
+    </p>
+
+    <p>
+        Onze liturgie, gebeden en vastenpraktijken zijn diep geworteld in de vroege Kerk.
+        De Koptische spiritualiteit kenmerkt zich door toewijding, gebed,
+        eenvoud en een sterk gemeenschapsgevoel.
+    </p>
+
+    <div class="wistjedat">
+        <strong>Wist je dat?</strong><br><br>
+        Het woord “Kopt” letterlijk “Egyptenaar” betekent?
+        De naam is afgeleid van het Griekse woord Aigyptios.
+    </div>
+</section>
+
+<section id="vrijdag">
+    <h2>Vrijdagavond</h2>
+    <p>
+        Iedere vrijdagavond komen wij samen.
+        Om 19:00 uur beginnen we met het Agpeya-gebed.
+        Aansluitend is er een lezing.
+    </p>
+
+    <p>
+        Na de lezing is er gelegenheid om samen iets te eten
+        en tijd met elkaar door te brengen.
+        Er worden spelletjes gespeeld, zoals een potje pool,
+        tafeltennis of PlayStation.
+    </p>
+
+    <p>
+        Het is een ontspannen avond waarin geloof en gezelligheid samenkomen.
+    </p>
+</section>
+
+<section class="contact" id="contact">
+    <h2>Contact</h2>
+    <p>
+        Wil je langskomen of heb je een vraag?
+        Je bent altijd welkom om contact met ons op te nemen.
+    </p>
+
+    <p>
+        📍 Adriaan van Bergenstraat 61, 3554 VC Utrecht<br>
+        📧 info@koptischejongerenutrecht.nl
+    </p>
+
+    <div class="social-buttons">
+        <a href="https://www.instagram.com/koptischejongerenutrecht" target="_blank" class="button">
+            Instagram
+        </a>
+        <a href="https://www.tiktok.com/@koptischejongerenutrecht?_r=1&_t=ZG-93yd8bXfk7E" target="_blank" class="button">
+            TikTok
+        </a>
     </div>
 
-    <section>
-        <h2>Welkom</h2>
-        <p>
-            Wij zijn een gemeenschap van jongeren die samenkomen in geloof,
-            verbondenheid en groei. Vanuit de rijke Koptisch-Orthodoxe traditie
-            zoeken wij verdieping, vriendschap en een levende relatie met Christus.
-        </p>
-    </section>
-    <section>
-        <h2>De Koptische traditie</h2>
-        <p>
-            De Koptisch-Orthodoxe Kerk behoort tot de oudste christelijke tradities ter wereld.
-            Volgens de overlevering werd de Kerk rond het jaar 42 na Christus gesticht door
-            de evangelist Marcus in Alexandrië.
-        </p>
+    <p style="margin-top:15px;">
+        Houd onze socials in de gaten voor actuele informatie
+        over lezingen en activiteiten.
+    </p>
+</section>
 
-        <p>
-            Onze liturgie, gebeden en vastenpraktijken zijn diep geworteld in de vroege Kerk.
-            De Koptische spiritualiteit kenmerkt zich door toewijding, gebed, eenvoud
-            en een sterk gemeenschapsgevoel.
-        </p>
-
-        <div class="wistjedat">
-            <strong>Wist je dat?</strong><br><br>
-            Het woord “Kopt” oorspronkelijk simpelweg “Egyptenaar” betekende?
-            De naam is afgeleid van het Griekse woord Aigyptios.
-        </div>
-    </section>
+<footer>
+    Koptische Jongeren Utrecht
+</footer>
 
 </body>
 </html>
