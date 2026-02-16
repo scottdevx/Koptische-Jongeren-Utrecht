@@ -6,208 +6,219 @@
 <title>Koptische Jongeren Utrecht</title>
 
 <style>
-:root {
-    --bg: #f7f3ea;
-    --text: #1f1f1f;
-    --primary: #2f2154;
-    --accent: #c6a74d;
+
+:root{
+  --bg:#f5f1e8;
+  --text:#1f1f1f;
+  --primary:#1e1e2f;
+  --gold:#c6a74d;
+  --soft:#ece6d8;
 }
 
-@media (prefers-color-scheme: dark) {
-    :root {
-        --bg: #111;
-        --text: #f2f2f2;
-        --primary: #9c8ce0;
-        --accent: #d8b766;
-    }
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#111;
+    --text:#f2f2f2;
+    --primary:#000;
+    --gold:#d4af37;
+    --soft:#1c1c1c;
+  }
 }
 
-body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    line-height: 1.7;
+body{
+  margin:0;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.7;
 }
 
 /* NAVIGATION */
 
-header {
-    background: var(--primary);
-    padding: 15px 10px;
-    overflow-x: auto;
+header{
+  background:var(--primary);
+  padding:15px 20px;
 }
 
-nav {
-    display: flex;
-    align-items: center;
-    gap: 18px;
-    white-space: nowrap;
-    max-width: 1200px;
-    margin: auto;
+nav{
+  max-width:1200px;
+  margin:auto;
+  display:flex;
+  justify-content:center;
+  gap:30px;
+  flex-wrap:wrap;
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    font-size: 14px;
-    flex-shrink: 0;
+nav a{
+  color:white;
+  text-decoration:none;
+  font-weight:500;
+  font-size:15px;
+  letter-spacing:0.5px;
+  transition:0.3s;
 }
 
-.brand {
-    font-weight: 600;
-    margin-right: 20px;
+nav a:hover{
+  color:var(--gold);
 }
 
 /* HERO */
 
-.hero {
-    text-align: center;
-    padding: 110px 20px 80px;
+.hero{
+  text-align:center;
+  padding:80px 20px 60px 20px;
 }
 
-.cross {
-    width: 70px;
-    margin-bottom: 20px;
+.hero img{
+  width:110px;
+  margin-bottom:30px;
+  filter: invert(75%) sepia(55%) saturate(500%) hue-rotate(5deg) brightness(95%) contrast(95%);
+  animation: floatCross 4s ease-in-out infinite;
 }
 
-h1 {
-    font-size: 34px;
-    color: var(--primary);
-    margin: 0;
+@keyframes floatCross{
+  0%{transform:translateY(0);}
+  50%{transform:translateY(-6px);}
+  100%{transform:translateY(0);}
 }
 
-.tagline {
-    margin-top: 12px;
-    font-size: 18px;
-    opacity: 0.85;
+.hero h1{
+  font-size:32px;
+  margin:0;
+  font-weight:600;
 }
 
-.quote {
-    max-width: 700px;
-    margin: 40px auto 0;
-    font-style: italic;
-    opacity: 0.9;
+.tagline{
+  margin-top:15px;
+  font-size:18px;
+  color:var(--gold);
 }
 
-/* SECTION */
-
-section {
-    max-width: 1000px;
-    margin: auto;
-    padding: 80px 20px;
+.divider{
+  width:70px;
+  height:2px;
+  background:var(--gold);
+  margin:25px auto 0 auto;
 }
 
-h2 {
-    color: var(--primary);
+/* SECTIONS */
+
+section{
+  max-width:900px;
+  margin:auto;
+  padding:70px 20px;
 }
 
-/* CTA */
-
-.cta {
-    margin-top: 40px;
+h2{
+  font-size:24px;
+  margin-bottom:20px;
+  color:var(--primary);
 }
 
-.button {
-    display: inline-block;
-    padding: 12px 28px;
-    background: var(--primary);
-    color: white;
-    border-radius: 30px;
-    text-decoration: none;
-    font-size: 14px;
+.card{
+  background:var(--soft);
+  padding:30px;
+  border-radius:10px;
 }
 
-/* FLOATING SOCIALS */
-
-.floating-socials {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    display: flex;
-    gap: 15px;
+.quote{
+  text-align:center;
+  font-style:italic;
+  margin-top:40px;
+  font-size:18px;
+  color:var(--gold);
 }
 
-.floating-socials img {
-    width: 26px;
-    height: 26px;
-    filter: invert(1);
-    opacity: 0.85;
+/* SOCIAL FLOAT */
+
+.social-float{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
 }
 
-/* FOOTER */
-
-footer {
-    background: var(--primary);
-    color: white;
-    text-align: center;
-    padding: 40px 20px;
+.social-float a{
+  width:45px;
+  height:45px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-decoration:none;
+  color:white;
+  font-size:18px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.2);
 }
+
+.instagram{
+  background:#E1306C;
+}
+
+.tiktok{
+  background:#000;
+}
+
+footer{
+  text-align:center;
+  padding:40px 20px;
+  font-size:14px;
+  opacity:0.7;
+}
+
 </style>
 </head>
 
 <body>
 
 <header>
-<nav>
-<a href="index.html" class="brand">Koptische Jongeren Utrecht</a>
-<a href="over-ons.html">Over ons</a>
-<a href="vrijdagavond.html">Vrijdagavond</a>
-<a href="agenda.html">Agenda</a>
-<a href="album.html">Album</a>
-<a href="contact.html">Contact</a>
-</nav>
+  <nav>
+    <a href="vrijdagavond.html">Vrijdagavond</a>
+    <a href="over-ons.html">Over ons</a>
+    <a href="agenda.html">Agenda</a>
+    <a href="album.html">Album</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 </header>
 
 <div class="hero">
-
-<!-- Mooi Goud Koptisch Kruis -->
-<svg class="cross" viewBox="0 0 100 140">
-<g fill="var(--accent)">
-<rect x="40" y="20" width="20" height="100" rx="10"/>
-<rect x="15" y="55" width="70" height="20" rx="10"/>
-<circle cx="50" cy="20" r="10"/>
-<circle cx="50" cy="120" r="10"/>
-<circle cx="15" cy="65" r="10"/>
-<circle cx="85" cy="65" r="10"/>
-</g>
-</svg>
-
-<h1>Koptische Jongeren Utrecht</h1>
-<div class="tagline">Een plek van geloof, gemeenschap en groei</div>
-
-<div class="quote">
-“Maar wie de HEERE verwachten, zullen hun kracht vernieuwen;
-zij zullen hun vleugels uitslaan als arenden.”
-– Jesaja 40:31
-</div>
-
-<div class="cta">
-<a href="vrijdagavond.html" class="button">Kom langs op vrijdag</a>
-</div>
-
+  <img src="cross.png" alt="Koptisch Kruis">
+  <h1>Koptische Jongeren Utrecht</h1>
+  <div class="tagline">Een plek van geloof en gemeenschap</div>
+  <div class="divider"></div>
 </div>
 
 <section>
-<h2>Welkom</h2>
-<p>
-Wij zijn een gemeenschap van jongeren die samenkomen in geloof,
-verbondenheid en groei. Vanuit de rijke Koptisch-Orthodoxe traditie
-zoeken wij verdieping, vriendschap en een levende relatie met Christus.
-</p>
+  <h2>Welkom</h2>
+  <div class="card">
+    Wij zijn een gemeenschap van jongeren die samenkomen in geloof, verbondenheid en groei.
+    Vanuit de rijke Koptisch-Orthodoxe traditie zoeken wij verdieping, vriendschap
+    en een levende relatie met Christus.
+
+    <br><br>
+
+    Iedere vrijdagavond om 19:00 uur beginnen wij met het Agpeya gebed,
+    gevolgd door een lezing. Na afloop is er ruimte om samen iets te eten,
+    elkaar beter te leren kennen en ontspannen samen te zijn.
+    Er wordt gepoold, tafeltennis gespeeld of samen een spel gespeeld.
+  </div>
+
+  <div class="quote">
+    “Maar wie de HEER verwachten, putten nieuwe kracht.
+    Zij varen op met vleugels als arenden.”<br>
+    — Jesaja 40:31
+  </div>
 </section>
 
 <footer>
-© 2026 Koptische Jongeren Utrecht
+  © 2026 Koptische Jongeren Utrecht
 </footer>
 
-<div class="floating-socials">
-<a href="https://www.instagram.com/koptischejongerenutrecht" target="_blank">
-<img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg">
-</a>
-<a href="https://www.tiktok.com/@koptischejongerenutrecht" target="_blank">
-<img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/tiktok.svg">
-</a>
+<div class="social-float">
+  <a href="https://www.instagram.com/koptischejongerenutrecht" target="_blank" class="instagram">IG</a>
+  <a href="https://www.tiktok.com/@koptischejongerenutrecht" target="_blank" class="tiktok">TT</a>
 </div>
 
 </body>
