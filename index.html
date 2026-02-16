@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="nl">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,214 +7,168 @@
 
 <style>
 :root {
-    --background: #f6f1e8;
-    --text: #2e2e2e;
-    --primary: #3e2a63;
-    --accent: #c7a84a;
-    --soft: #ede6d6;
+    --bg: #f7f3ea;
+    --text: #1f1f1f;
+    --primary: #2f2154;
+    --accent: #c6a74d;
+    --soft: #efe7d7;
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --background: #121212;
-        --text: #f1f1f1;
-        --primary: #8d79c9;
-        --accent: #d4b866;
-        --soft: #1e1e1e;
+        --bg: #111;
+        --text: #f2f2f2;
+        --primary: #9c8ce0;
+        --accent: #d8b766;
+        --soft: #1c1c1c;
     }
 }
 
 body {
     margin: 0;
-    background-color: var(--background);
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: var(--bg);
     color: var(--text);
+    line-height: 1.7;
+}
+
+/* NAVIGATION */
+
+header {
+    background: var(--primary);
+    padding: 18px 20px;
 }
 
 nav {
-    background-color: var(--primary);
-    padding: 14px 10px;
-    text-align: center;
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    margin: 0 10px;
+    margin-left: 20px;
     font-size: 14px;
 }
 
+/* HERO */
+
 .hero {
     text-align: center;
-    padding: 60px 20px 40px 20px;
+    padding: 90px 20px 70px;
 }
 
 .logo {
-    width: 160px;
-    max-width: 80%;
+    width: 170px;
 }
 
 h1 {
-    font-size: 28px;
+    margin-top: 25px;
+    font-size: 32px;
     color: var(--primary);
-    margin-top: 20px;
 }
 
 .tagline {
-    font-size: 16px;
-    margin-top: 10px;
-    opacity: 0.8;
+    margin-top: 12px;
+    font-size: 18px;
+    opacity: 0.85;
 }
 
-.divider {
-    width: 50px;
-    height: 2px;
-    background-color: var(--accent);
-    margin: 25px auto;
+.quote {
+    max-width: 700px;
+    margin: 40px auto 0;
+    font-style: italic;
+    opacity: 0.9;
 }
+
+/* SECTION */
 
 section {
-    max-width: 800px;
+    max-width: 1100px;
     margin: auto;
-    padding: 40px 20px;
-    line-height: 1.6;
+    padding: 80px 20px;
 }
 
 h2 {
     color: var(--primary);
+    margin-bottom: 20px;
 }
 
-.wistjedat {
-    background-color: var(--soft);
-    border-left: 4px solid var(--accent);
-    padding: 18px;
-    margin-top: 25px;
-    border-radius: 6px;
-}
+/* CALL TO ACTION */
 
-.contact {
-    background-color: var(--soft);
-    border-radius: 8px;
-    padding-bottom: 40px;
-}
-
-.social-buttons {
-    display: flex;
-    gap: 15px;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-top: 20px;
+.cta {
+    text-align: center;
+    margin-top: 40px;
 }
 
 .button {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    background-color: var(--primary);
+    display: inline-block;
+    padding: 12px 26px;
+    background: var(--primary);
     color: white;
-    padding: 10px 20px;
+    border-radius: 30px;
     text-decoration: none;
-    border-radius: 25px;
     font-size: 14px;
 }
 
-.button img {
-    width: 18px;
-    height: 18px;
-}
+/* FOOTER */
 
 footer {
-    text-align: center;
-    padding: 30px 15px;
-    background-color: var(--primary);
+    background: var(--primary);
     color: white;
-    font-size: 14px;
+    text-align: center;
+    padding: 40px 20px;
 }
 </style>
 </head>
 
 <body>
 
+<header>
 <nav>
-    <a href="#welkom">Welkom</a>
-    <a href="#traditie">Traditie</a>
-    <a href="#vrijdag">Vrijdag</a>
-    <a href="#contact">Contact</a>
+<div style="color:white;font-weight:600;">Koptische Jongeren Utrecht</div>
+<div>
+<a href="over-ons.html">Over ons</a>
+<a href="vrijdagavond.html">Vrijdagavond</a>
+<a href="agenda.html">Agenda</a>
+<a href="album.html">Album</a>
+<a href="contact.html">Contact</a>
+</div>
 </nav>
+</header>
 
-<div class="hero" id="welkom">
-    <img src="logo.png" class="logo">
-    <h1>✝ Koptische Jongeren Utrecht</h1>
-    <div class="tagline">Een plek van geloof en gemeenschap</div>
-    <div class="divider"></div>
+<div class="hero">
+<img src="logo.png" class="logo">
+
+<h1>✝ Koptische Jongeren Utrecht</h1>
+<div class="tagline">Een plek van geloof, gemeenschap en groei</div>
+
+<div class="quote">
+“Maar wie de HEERE verwachten, zullen hun kracht vernieuwen.”
+– Jesaja 40:31
+</div>
+
+<div class="cta">
+<a href="vrijdagavond.html" class="button">Kom langs op vrijdag</a>
+</div>
 </div>
 
 <section>
-    <h2>Welkom</h2>
-    <p>
-        Wij zijn een gemeenschap van jongeren die samenkomen in geloof,
-        verbondenheid en groei. Vanuit de rijke Koptisch-Orthodoxe traditie
-        zoeken wij verdieping, vriendschap en een levende relatie met Christus.
-    </p>
+<h2>Welkom</h2>
+<p>
+Wij zijn een gemeenschap van jongeren die samenkomen in geloof,
+verbondenheid en groei. Vanuit de rijke Koptisch-Orthodoxe traditie
+zoeken wij verdieping, vriendschap en een levende relatie met Christus.
+</p>
 </section>
 
-<section id="traditie">
-    <h2>De Koptische traditie</h2>
-    <p>
-        De Koptisch-Orthodoxe Kerk behoort tot de oudste christelijke tradities ter wereld.
-        De Kerk werd rond het jaar 42 na Christus in Alexandrië gesticht door de evangelist Marcus.
-    </p>
+<footer>
+© 2026 Koptische Jongeren Utrecht
+</footer>
 
-    <p>
-        Onze liturgie, gebeden en vastenpraktijken zijn diep geworteld in de vroege Kerk.
-        De Koptische spiritualiteit kenmerkt zich door toewijding, gebed,
-        eenvoud en een sterk gemeenschapsgevoel.
-    </p>
+</body>
+</html>
 
-    <div class="wistjedat">
-        <strong>Wist je dat?</strong><br><br>
-        Het woord “Kopt” letterlijk “Egyptenaar” betekent?
-        De naam is afgeleid van het Griekse woord Aigyptios.
-    </div>
-</section>
-
-<section id="vrijdag">
-    <h2>Vrijdagavond</h2>
-    <p>
-        Iedere vrijdagavond komen wij samen.
-        Om 19:00 uur beginnen we met het Agpeya-gebed.
-        Aansluitend is er een lezing.
-    </p>
-
-    <p>
-        Na de lezing is er gelegenheid om samen iets te eten
-        en tijd met elkaar door te brengen.
-        Er worden spelletjes gespeeld, zoals een potje pool,
-        tafeltennis of PlayStation.
-    </p>
-</section>
-
-<section class="contact" id="contact">
-    <h2>Contact</h2>
-    <p>
-        Wil je langskomen of heb je een vraag?
-        Neem gerust contact met ons op of stuur ons een DM
-        via een van onze socials.
-    </p>
-
-    <p>
-        📍 Adriaan van Bergenstraat 61, 3554 VC Utrecht<br>
-        📧 info@koptischejongerenutrecht.nl
-    </p>
-
-    <div class="social-buttons">
-        <a href="https://www.instagram.com/koptischejongerenutrecht" target="_blank" class="button">
-            <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png">
-            Instagram
-        </a>
-
-        <a href="https://www.tiktok.com/@koptischejongerenutrecht?_r=1&_t=ZG-93yd8bXfk7E" target="_blank" class="button">
-            <img src="https://cdn-icons-png.flaticon.com/512/3046/3046126.png">
-            TikTok
-        </a>
-    </div>
