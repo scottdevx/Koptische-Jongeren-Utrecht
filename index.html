@@ -126,7 +126,7 @@ section{
   margin-bottom:40px;
 }
 
-/* BIJBELTEKST – subtieler */
+/* BIJBELTEKST */
 
 .scripture{
   text-align:center;
@@ -168,8 +168,6 @@ section{
   display:flex;
   align-items:center;
   justify-content:center;
-  background:white;
-  box-shadow:0 4px 10px rgba(0,0,0,0.15);
   transition:transform 0.2s ease;
 }
 
@@ -177,18 +175,18 @@ section{
   transform:scale(1.08);
 }
 
+.instagram-btn{
+  background:#E1306C;
+}
+
+.tiktok-btn{
+  background:#000000;
+}
+
 .social-float img{
   width:24px;
   height:24px;
-}
-
-/* Dark mode social background */
-
-@media (prefers-color-scheme: dark){
-  .social-float a{
-    background:#1a1a1a;
-    box-shadow:0 4px 12px rgba(255,255,255,0.05);
-  }
+  filter:invert(1);
 }
 
 /* FOOTER */
@@ -261,11 +259,11 @@ en wordt vandaag nog steeds gebruikt voor de inheemse christenen van Egypte.
 </footer>
 
 <div class="social-float">
-  <a href="https://www.instagram.com/koptischejongerenutrecht" target="_blank">
-    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" style="filter:none;">
+  <a href="https://www.instagram.com/koptischejongerenutrecht" target="_blank" class="instagram-btn">
+    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg">
   </a>
-  <a href="https://www.tiktok.com/@koptischejongerenutrecht" target="_blank">
-    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/tiktok.svg" style="filter:invert(1);">
+  <a href="https://www.tiktok.com/@koptischejongerenutrecht" target="_blank" class="tiktok-btn">
+    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/tiktok.svg">
   </a>
 </div>
 
