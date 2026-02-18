@@ -7,20 +7,20 @@
 
 <style>
 :root{
-  --bg:#f4f1ea;
+  --bg:#f6f1e8;
   --text:#1f1f1f;
-  --primary:#0f1b2d;
-  --gold:#c6a74d;
-  --soft:#e9e3d6;
+  --primary:#10233c;
+  --accent:#c6a74d;
+  --soft:#ebe4d6;
 }
 
 @media (prefers-color-scheme: dark){
   :root{
-    --bg:#0b0f17;
+    --bg:#0f1724;
     --text:#f2f2f2;
-    --primary:#000;
-    --gold:#d4af37;
-    --soft:#111827;
+    --primary:#000814;
+    --accent:#d4af37;
+    --soft:#111c2b;
   }
 }
 
@@ -32,11 +32,11 @@ body{
   line-height:1.7;
 }
 
-/* NAVIGATION */
+/* NAV */
 
 header{
   background:var(--primary);
-  padding:16px 20px;
+  padding:15px 20px;
 }
 
 nav{
@@ -44,7 +44,7 @@ nav{
   margin:auto;
   display:flex;
   justify-content:center;
-  gap:28px;
+  gap:25px;
   flex-wrap:wrap;
 }
 
@@ -53,61 +53,33 @@ nav a{
   text-decoration:none;
   font-size:15px;
   font-weight:500;
-  transition:0.3s;
 }
 
 nav a:hover{
-  color:var(--gold);
+  color:var(--accent);
 }
 
 /* HERO */
 
 .hero{
   text-align:center;
-  padding:90px 20px 70px 20px;
+  padding:80px 20px 60px;
 }
 
-.hero img.cross{
-  width:120px;
-  margin-bottom:25px;
-  filter: invert(75%) sepia(55%) saturate(500%) hue-rotate(5deg) brightness(95%) contrast(95%);
-  animation: floatCross 4s ease-in-out infinite;
-}
-
-@keyframes floatCross{
-  0%{transform:translateY(0);}
-  50%{transform:translateY(-6px);}
-  100%{transform:translateY(0);}
+.hero img{
+  width:100px;
+  margin-bottom:20px;
 }
 
 .hero h1{
-  font-size:34px;
   margin:0;
+  font-size:32px;
 }
 
 .tagline{
-  margin-top:15px;
+  margin-top:10px;
   font-size:18px;
-  color:var(--gold);
-}
-
-/* SOCIAL ICONS IN HERO */
-
-.hero-socials{
-  margin-top:25px;
-  display:flex;
-  justify-content:center;
-  gap:20px;
-}
-
-.hero-socials img{
-  width:28px;
-  transition:0.3s;
-}
-
-.hero-socials img:hover{
-  transform:scale(1.1);
-  filter: brightness(1.2);
+  color:var(--accent);
 }
 
 /* SECTION */
@@ -128,18 +100,48 @@ section{
   text-align:center;
   font-style:italic;
   margin-top:40px;
-  color:var(--gold);
+  color:var(--accent);
 }
 
-/* FOOTER */
+/* LOCATION */
+
+.location{
+  text-align:center;
+  padding:60px 20px;
+}
+
+/* FLOATING SOCIALS */
+
+.social-float{
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+.social-float a{
+  width:45px;
+  height:45px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:white;
+  text-decoration:none;
+  font-size:18px;
+}
+
+.instagram{background:#E1306C;}
+.tiktok{background:#000;}
 
 footer{
   text-align:center;
   padding:40px 20px;
   font-size:14px;
-  opacity:0.7;
+  opacity:0.6;
 }
-
 </style>
 </head>
 
@@ -158,43 +160,43 @@ footer{
 </header>
 
 <div class="hero">
-  <img src="cross.png" class="cross" alt="Koptisch kruis">
+  <img src="logo.png" alt="Koptisch logo">
   <h1>Koptische Jongeren Utrecht</h1>
   <div class="tagline">Een plek van geloof en gemeenschap</div>
-
-  <div class="hero-socials">
-    <a href="https://www.instagram.com/koptischejongerenutrecht" target="_blank">
-      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg">
-    </a>
-    <a href="https://www.tiktok.com/@koptischejongerenutrecht" target="_blank">
-      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/tiktok.svg">
-    </a>
-  </div>
 </div>
 
 <section>
   <div class="card">
-    Wij zijn een gemeenschap van jongeren die samenkomen in geloof,
-    verbondenheid en groei. Vanuit de rijke Koptisch-Orthodoxe traditie
-    zoeken wij verdieping, vriendschap en een levende relatie met Christus.
+    Iedere vrijdagavond om 19:00 uur begint onze Vrijdagavond bijeenkomst
+    met het Agpeya gebed, gevolgd door een lezing.
 
     <br><br>
 
-    Iedere vrijdagavond om 19:00 uur beginnen wij met het Agpeya gebed,
-    gevolgd door een lezing. Na afloop is er ruimte voor ontmoeting,
-    gezelligheid en activiteiten.
+    Na afloop is er ruimte voor ontmoeting, samen eten
+    en activiteiten zoals poolen, tafeltennis of een spel.
   </div>
 
   <div class="quote">
-    “Maar wie de HEER verwachten, putten nieuwe kracht.
-    Zij varen op met vleugels als arenden.”
+    “Maar wie de HEER verwachten, putten nieuwe kracht;
+    zij varen op met vleugels als arenden.”
     — Jesaja 40:31
   </div>
 </section>
 
+<div class="location">
+  <h2>Locatie</h2>
+  Adriaan van Bergenstraat 61<br>
+  3554 VC Utrecht
+</div>
+
 <footer>
   © 2026 Koptische Jongeren Utrecht
 </footer>
+
+<div class="social-float">
+  <a href="https://www.instagram.com/koptischejongerenutrecht" target="_blank" class="instagram">IG</a>
+  <a href="https://www.tiktok.com/@koptischejongerenutrecht" target="_blank" class="tiktok">TT</a>
+</div>
 
 </body>
 </html>
