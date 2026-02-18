@@ -33,7 +33,7 @@ body{
   line-height:1.7;
 }
 
-/* NAV */
+/* NAVIGATION */
 
 header{
   background:var(--navy);
@@ -68,7 +68,7 @@ nav a:hover{
   padding:110px 20px 80px;
 }
 
-/* Watermark logo */
+/* Watermark jongerenlogo */
 
 .hero::before{
   content:"";
@@ -85,7 +85,7 @@ nav a:hover{
 
 @media (prefers-color-scheme: dark){
   .hero::before{
-    opacity:0.08;
+    opacity:0.12;
   }
 }
 
@@ -126,7 +126,7 @@ section{
   margin-bottom:40px;
 }
 
-/* SCRIPTURE – minder dominant */
+/* BIJBELTEKST – subtieler */
 
 .scripture{
   text-align:center;
@@ -150,7 +150,7 @@ section{
   margin:40px auto 0;
 }
 
-/* SOCIALS */
+/* SOCIAL BUTTONS */
 
 .social-float{
   position:fixed;
@@ -158,12 +158,37 @@ section{
   bottom:22px;
   display:flex;
   flex-direction:column;
-  gap:18px;
+  gap:16px;
+}
+
+.social-float a{
+  width:48px;
+  height:48px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:white;
+  box-shadow:0 4px 10px rgba(0,0,0,0.15);
+  transition:transform 0.2s ease;
+}
+
+.social-float a:hover{
+  transform:scale(1.08);
 }
 
 .social-float img{
-  width:32px;
-  height:32px;
+  width:24px;
+  height:24px;
+}
+
+/* Dark mode social background */
+
+@media (prefers-color-scheme: dark){
+  .social-float a{
+    background:#1a1a1a;
+    box-shadow:0 4px 12px rgba(255,255,255,0.05);
+  }
 }
 
 /* FOOTER */
@@ -237,10 +262,10 @@ en wordt vandaag nog steeds gebruikt voor de inheemse christenen van Egypte.
 
 <div class="social-float">
   <a href="https://www.instagram.com/koptischejongerenutrecht" target="_blank">
-    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" style="filter:invert(0);">
+    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" style="filter:none;">
   </a>
   <a href="https://www.tiktok.com/@koptischejongerenutrecht" target="_blank">
-    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/tiktok.svg" style="filter:invert(0);">
+    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/tiktok.svg" style="filter:invert(1);">
   </a>
 </div>
 
