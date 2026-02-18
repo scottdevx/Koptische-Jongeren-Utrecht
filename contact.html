@@ -1,1 +1,198 @@
 
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact – Koptische Jongeren Utrecht</title>
+
+<style>
+:root{
+  --bg:#f6f1e8;
+  --text:#1f1f1f;
+  --primary:#0f213a;
+  --accent:#c6a74d;
+  --soft:#ece4d4;
+}
+
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#0b0b0d;
+    --text:#f2f2f2;
+    --primary:#000000;
+    --accent:#d4af37;
+    --soft:#111111;
+  }
+}
+
+body{
+  margin:0;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.7;
+}
+
+/* NAV */
+
+header{
+  background:var(--primary);
+  padding:15px 20px;
+}
+
+nav{
+  max-width:1200px;
+  margin:auto;
+  display:flex;
+  justify-content:center;
+  gap:25px;
+  flex-wrap:wrap;
+}
+
+nav a{
+  color:white;
+  text-decoration:none;
+  font-size:15px;
+  font-weight:500;
+}
+
+nav a:hover{
+  color:var(--accent);
+}
+
+/* HERO */
+
+.page-hero{
+  text-align:center;
+  padding:70px 20px 40px;
+}
+
+.page-hero img{
+  width:60px;
+  margin-bottom:15px;
+}
+
+.page-hero h1{
+  margin:0;
+  font-size:28px;
+}
+
+.divider{
+  width:50px;
+  height:2px;
+  background:var(--accent);
+  margin:20px auto;
+}
+
+/* CONTENT */
+
+section{
+  max-width:900px;
+  margin:auto;
+  padding:60px 20px;
+}
+
+.card{
+  background:var(--soft);
+  padding:35px;
+  border-radius:10px;
+  margin-bottom:30px;
+}
+
+.card a{
+  color:var(--primary);
+  font-weight:600;
+  text-decoration:none;
+}
+
+.card a:hover{
+  color:var(--accent);
+}
+
+.map-container{
+  border-radius:10px;
+  overflow:hidden;
+  margin-top:30px;
+}
+
+/* FOOTER */
+
+footer{
+  text-align:center;
+  padding:40px 20px;
+  font-size:14px;
+  opacity:0.7;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<nav>
+  <a href="index.html">Home</a>
+  <a href="vrijdagavond.html">Vrijdagavond</a>
+  <a href="diensten.html">Diensten</a>
+  <a href="activiteiten.html">Activiteiten</a>
+  <a href="galerij.html">Galerij</a>
+  <a href="over-ons.html">Over ons</a>
+  <a href="contact.html">Contact</a>
+</nav>
+</header>
+
+<div class="page-hero">
+  <img src="cross.png" alt="Koptisch kruis">
+  <h1>Contact</h1>
+  <div class="divider"></div>
+</div>
+
+<section>
+
+<div class="card">
+<strong>Adres</strong><br><br>
+Adriaan van Bergenstraat 61<br>
+3554 VC Utrecht
+</div>
+
+<div class="card">
+<strong>Vragen?</strong><br><br>
+Heb je vragen of wil je langskomen? Neem gerust contact met ons op via onze socials
+of stuur een e-mail naar:<br><br>
+
+<a href="mailto:info@koptischejongerenutrecht.nl">
+info@koptischejongerenutrecht.nl
+</a>
+
+<br><br>
+
+Of stuur ons een DM via:
+
+<br><br>
+
+<a href="https://www.instagram.com/koptischejongerenutrecht" target="_blank">
+Instagram
+</a><br>
+<a href="https://www.tiktok.com/@koptischejongerenutrecht" target="_blank">
+TikTok
+</a>
+</div>
+
+<div class="map-container">
+  <iframe 
+    src="https://www.google.com/maps?q=Adriaan+van+Bergenstraat+61+Utrecht&output=embed"
+    width="100%" 
+    height="350" 
+    style="border:0;"
+    allowfullscreen=""
+    loading="lazy">
+  </iframe>
+</div>
+
+</section>
+
+<footer>
+© 2026 Koptische Jongeren Utrecht
+</footer>
+
+</body>
+</html>
