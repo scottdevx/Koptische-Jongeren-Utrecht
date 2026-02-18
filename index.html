@@ -6,21 +6,22 @@
 <title>Koptische Jongeren Utrecht</title>
 
 <style>
+
 :root{
   --bg:#f6f1e8;
   --text:#1f1f1f;
-  --primary:#10233c;
+  --primary:#0f213a;
   --accent:#c6a74d;
-  --soft:#ebe4d6;
+  --soft:#ece4d4;
 }
 
 @media (prefers-color-scheme: dark){
   :root{
-    --bg:#0f1724;
+    --bg:#0c1422;
     --text:#f2f2f2;
-    --primary:#000814;
+    --primary:#000c1f;
     --accent:#d4af37;
-    --soft:#111c2b;
+    --soft:#111a2b;
   }
 }
 
@@ -32,7 +33,7 @@ body{
   line-height:1.7;
 }
 
-/* NAV */
+/* NAVIGATION */
 
 header{
   background:var(--primary);
@@ -62,24 +63,53 @@ nav a:hover{
 /* HERO */
 
 .hero{
+  position:relative;
   text-align:center;
-  padding:80px 20px 60px;
+  padding:100px 20px 80px;
+  overflow:hidden;
 }
 
-.hero img{
-  width:100px;
+/* Watermark achtergrond */
+
+.hero::before{
+  content:"";
+  position:absolute;
+  background:url("logo.png") no-repeat center;
+  background-size:350px;
+  opacity:0.05;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  z-index:0;
+}
+
+.hero-content{
+  position:relative;
+  z-index:1;
+}
+
+.hero img.cross{
+  width:90px;
   margin-bottom:20px;
 }
 
 .hero h1{
   margin:0;
-  font-size:32px;
+  font-size:34px;
 }
 
 .tagline{
-  margin-top:10px;
+  margin-top:12px;
   font-size:18px;
   color:var(--accent);
+}
+
+.divider{
+  width:60px;
+  height:2px;
+  background:var(--accent);
+  margin:25px auto;
 }
 
 /* SECTION */
@@ -103,11 +133,12 @@ section{
   color:var(--accent);
 }
 
-/* LOCATION */
+/* GOOGLE MAP */
 
-.location{
-  text-align:center;
-  padding:60px 20px;
+.map-container{
+  margin-top:40px;
+  border-radius:10px;
+  overflow:hidden;
 }
 
 /* FLOATING SOCIALS */
@@ -140,8 +171,9 @@ footer{
   text-align:center;
   padding:40px 20px;
   font-size:14px;
-  opacity:0.6;
+  opacity:0.7;
 }
+
 </style>
 </head>
 
@@ -160,9 +192,12 @@ footer{
 </header>
 
 <div class="hero">
-  <img src="logo.png" alt="Koptisch logo">
-  <h1>Koptische Jongeren Utrecht</h1>
-  <div class="tagline">Een plek van geloof en gemeenschap</div>
+  <div class="hero-content">
+    <img src="cross.png" class="cross" alt="Koptisch kruis">
+    <h1>Koptische Jongeren Utrecht</h1>
+    <div class="tagline">Een plek van geloof en gemeenschap</div>
+    <div class="divider"></div>
+  </div>
 </div>
 
 <section>
@@ -172,8 +207,9 @@ footer{
 
     <br><br>
 
-    Na afloop is er ruimte voor ontmoeting, samen eten
-    en activiteiten zoals poolen, tafeltennis of een spel.
+    Na afloop is er ruimte voor ontmoeting,
+    samen eten en activiteiten zoals poolen,
+    tafeltennis of samen een spel spelen.
   </div>
 
   <div class="quote">
@@ -181,13 +217,19 @@ footer{
     zij varen op met vleugels als arenden.”
     — Jesaja 40:31
   </div>
-</section>
 
-<div class="location">
-  <h2>Locatie</h2>
-  Adriaan van Bergenstraat 61<br>
-  3554 VC Utrecht
-</div>
+  <div class="map-container">
+    <iframe 
+      src="https://www.google.com/maps?q=Adriaan+van+Bergenstraat+61+Utrecht&output=embed"
+      width="100%" 
+      height="300" 
+      style="border:0;"
+      allowfullscreen="" 
+      loading="lazy">
+    </iframe>
+  </div>
+
+</section>
 
 <footer>
   © 2026 Koptische Jongeren Utrecht
