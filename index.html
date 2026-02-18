@@ -6,22 +6,21 @@
 <title>Koptische Jongeren Utrecht</title>
 
 <style>
-
 :root{
-  --bg:#f6f1e8;
+  --bg:#f4f0e8;
   --text:#1f1f1f;
   --primary:#0f213a;
   --accent:#c6a74d;
-  --soft:#ece4d4;
+  --card:#f0ece3;
 }
 
 @media (prefers-color-scheme: dark){
   :root{
-    --bg:#0c1422;
+    --bg:#000000;
     --text:#f2f2f2;
-    --primary:#000c1f;
+    --primary:#000000;
     --accent:#d4af37;
-    --soft:#111a2b;
+    --card:#111111;
   }
 }
 
@@ -33,7 +32,7 @@ body{
   line-height:1.7;
 }
 
-/* NAVIGATION */
+/* NAV */
 
 header{
   background:var(--primary);
@@ -65,18 +64,16 @@ nav a:hover{
 .hero{
   position:relative;
   text-align:center;
-  padding:100px 20px 80px;
+  padding:100px 20px 70px;
   overflow:hidden;
 }
-
-/* Watermark achtergrond */
 
 .hero::before{
   content:"";
   position:absolute;
   background:url("logo.png") no-repeat center;
-  background-size:350px;
-  opacity:0.05;
+  background-size:320px;
+  opacity:0.04;
   top:0;
   left:0;
   right:0;
@@ -89,7 +86,7 @@ nav a:hover{
   z-index:1;
 }
 
-.hero img.cross{
+.hero img{
   width:90px;
   margin-bottom:20px;
 }
@@ -100,7 +97,7 @@ nav a:hover{
 }
 
 .tagline{
-  margin-top:12px;
+  margin-top:10px;
   font-size:18px;
   color:var(--accent);
 }
@@ -112,7 +109,7 @@ nav a:hover{
   margin:25px auto;
 }
 
-/* SECTION */
+/* SECTIONS */
 
 section{
   max-width:900px;
@@ -121,9 +118,10 @@ section{
 }
 
 .card{
-  background:var(--soft);
+  background:var(--card);
   padding:35px;
   border-radius:10px;
+  margin-bottom:30px;
 }
 
 .quote{
@@ -133,12 +131,12 @@ section{
   color:var(--accent);
 }
 
-/* GOOGLE MAP */
-
-.map-container{
-  margin-top:40px;
+.wistjedat{
+  background:var(--accent);
+  color:#000;
+  padding:25px;
   border-radius:10px;
-  overflow:hidden;
+  margin-top:40px;
 }
 
 /* FLOATING SOCIALS */
@@ -152,20 +150,13 @@ section{
   gap:12px;
 }
 
-.social-float a{
-  width:45px;
-  height:45px;
+.social-float img{
+  width:28px;
+  height:28px;
+  background:white;
   border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  color:white;
-  text-decoration:none;
-  font-size:18px;
+  padding:8px;
 }
-
-.instagram{background:#E1306C;}
-.tiktok{background:#000;}
 
 footer{
   text-align:center;
@@ -173,7 +164,6 @@ footer{
   font-size:14px;
   opacity:0.7;
 }
-
 </style>
 </head>
 
@@ -193,7 +183,7 @@ footer{
 
 <div class="hero">
   <div class="hero-content">
-    <img src="cross.png" class="cross" alt="Koptisch kruis">
+    <img src="cross.png" alt="Koptisch kruis">
     <h1>Koptische Jongeren Utrecht</h1>
     <div class="tagline">Een plek van geloof en gemeenschap</div>
     <div class="divider"></div>
@@ -201,44 +191,50 @@ footer{
 </div>
 
 <section>
-  <div class="card">
-    Iedere vrijdagavond om 19:00 uur begint onze Vrijdagavond bijeenkomst
-    met het Agpeya gebed, gevolgd door een lezing.
 
-    <br><br>
+<div class="card">
+<strong>Welkom</strong><br><br>
+Welkom op de officiële pagina van Koptische Jongeren Utrecht.
+Wij zijn een gemeenschap van jongeren die samenkomen in geloof,
+verbondenheid en groei binnen de Koptisch-Orthodoxe Kerk.
 
-    Na afloop is er ruimte voor ontmoeting,
-    samen eten en activiteiten zoals poolen,
-    tafeltennis of samen een spel spelen.
-  </div>
+<br><br>
 
-  <div class="quote">
-    “Maar wie de HEER verwachten, putten nieuwe kracht;
-    zij varen op met vleugels als arenden.”
-    — Jesaja 40:31
-  </div>
+Iedere vrijdagavond om 19:00 uur komen wij samen
+voor gebed, verdieping en ontmoeting.
+Onze bijeenkomsten zijn gericht op jongeren
+die meer aansluiting zoeken in geloof en gemeenschap.
+</div>
 
-  <div class="map-container">
-    <iframe 
-      src="https://www.google.com/maps?q=Adriaan+van+Bergenstraat+61+Utrecht&output=embed"
-      width="100%" 
-      height="300" 
-      style="border:0;"
-      allowfullscreen="" 
-      loading="lazy">
-    </iframe>
-  </div>
+<div class="quote">
+“Maar wie de HEER verwachten, putten nieuwe kracht;
+zij varen op met vleugels als arenden.”
+— Jesaja 40:31
+</div>
+
+<div class="wistjedat">
+<strong>Wist je dat?</strong><br><br>
+Het woord “Kopt” oorspronkelijk “Egyptenaar” betekent?
+Het is afgeleid van het Griekse woord <em>Aigyptios</em>
+en wordt vandaag nog steeds gebruikt
+voor de inheemse christenen van Egypte.
+</div>
 
 </section>
 
 <footer>
-  © 2026 Koptische Jongeren Utrecht
+© 2026 Koptische Jongeren Utrecht
 </footer>
 
 <div class="social-float">
-  <a href="https://www.instagram.com/koptischejongerenutrecht" target="_blank" class="instagram">IG</a>
-  <a href="https://www.tiktok.com/@koptischejongerenutrecht" target="_blank" class="tiktok">TT</a>
+  <a href="https://www.instagram.com/koptischejongerenutrecht" target="_blank">
+    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg">
+  </a>
+  <a href="https://www.tiktok.com/@koptischejongerenutrecht" target="_blank">
+    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/tiktok.svg">
+  </a>
 </div>
 
 </body>
 </html>
+
