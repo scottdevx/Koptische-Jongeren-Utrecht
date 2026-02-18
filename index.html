@@ -6,22 +6,21 @@
 <title>Koptische Jongeren Utrecht</title>
 
 <style>
-
 :root{
-  --bg:#f5f1e8;
+  --bg:#f4f1ea;
   --text:#1f1f1f;
-  --primary:#1e1e2f;
+  --primary:#0f1b2d;
   --gold:#c6a74d;
-  --soft:#ece6d8;
+  --soft:#e9e3d6;
 }
 
 @media (prefers-color-scheme: dark){
   :root{
-    --bg:#111;
+    --bg:#0b0f17;
     --text:#f2f2f2;
     --primary:#000;
     --gold:#d4af37;
-    --soft:#1c1c1c;
+    --soft:#111827;
   }
 }
 
@@ -37,7 +36,7 @@ body{
 
 header{
   background:var(--primary);
-  padding:15px 20px;
+  padding:16px 20px;
 }
 
 nav{
@@ -45,16 +44,15 @@ nav{
   margin:auto;
   display:flex;
   justify-content:center;
-  gap:30px;
+  gap:28px;
   flex-wrap:wrap;
 }
 
 nav a{
   color:white;
   text-decoration:none;
-  font-weight:500;
   font-size:15px;
-  letter-spacing:0.5px;
+  font-weight:500;
   transition:0.3s;
 }
 
@@ -66,12 +64,12 @@ nav a:hover{
 
 .hero{
   text-align:center;
-  padding:80px 20px 60px 20px;
+  padding:90px 20px 70px 20px;
 }
 
-.hero img{
-  width:110px;
-  margin-bottom:30px;
+.hero img.cross{
+  width:120px;
+  margin-bottom:25px;
   filter: invert(75%) sepia(55%) saturate(500%) hue-rotate(5deg) brightness(95%) contrast(95%);
   animation: floatCross 4s ease-in-out infinite;
 }
@@ -83,9 +81,8 @@ nav a:hover{
 }
 
 .hero h1{
-  font-size:32px;
+  font-size:34px;
   margin:0;
-  font-weight:600;
 }
 
 .tagline{
@@ -94,14 +91,26 @@ nav a:hover{
   color:var(--gold);
 }
 
-.divider{
-  width:70px;
-  height:2px;
-  background:var(--gold);
-  margin:25px auto 0 auto;
+/* SOCIAL ICONS IN HERO */
+
+.hero-socials{
+  margin-top:25px;
+  display:flex;
+  justify-content:center;
+  gap:20px;
 }
 
-/* SECTIONS */
+.hero-socials img{
+  width:28px;
+  transition:0.3s;
+}
+
+.hero-socials img:hover{
+  transform:scale(1.1);
+  filter: brightness(1.2);
+}
+
+/* SECTION */
 
 section{
   max-width:900px;
@@ -109,15 +118,9 @@ section{
   padding:70px 20px;
 }
 
-h2{
-  font-size:24px;
-  margin-bottom:20px;
-  color:var(--primary);
-}
-
 .card{
   background:var(--soft);
-  padding:30px;
+  padding:35px;
   border-radius:10px;
 }
 
@@ -125,41 +128,10 @@ h2{
   text-align:center;
   font-style:italic;
   margin-top:40px;
-  font-size:18px;
   color:var(--gold);
 }
 
-/* SOCIAL FLOAT */
-
-.social-float{
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  display:flex;
-  flex-direction:column;
-  gap:12px;
-}
-
-.social-float a{
-  width:45px;
-  height:45px;
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-decoration:none;
-  color:white;
-  font-size:18px;
-  box-shadow:0 4px 12px rgba(0,0,0,0.2);
-}
-
-.instagram{
-  background:#E1306C;
-}
-
-.tiktok{
-  background:#000;
-}
+/* FOOTER */
 
 footer{
   text-align:center;
@@ -174,40 +146,48 @@ footer{
 <body>
 
 <header>
-  <nav>
-    <a href="vrijdagavond.html">Vrijdagavond</a>
-    <a href="over-ons.html">Over ons</a>
-    <a href="agenda.html">Agenda</a>
-    <a href="album.html">Album</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+<nav>
+  <a href="index.html">Home</a>
+  <a href="vrijdagavond.html">Vrijdagavond</a>
+  <a href="diensten.html">Diensten</a>
+  <a href="activiteiten.html">Activiteiten</a>
+  <a href="galerij.html">Galerij</a>
+  <a href="over-ons.html">Over ons</a>
+  <a href="contact.html">Contact</a>
+</nav>
 </header>
 
 <div class="hero">
-  <img src="cross.png" alt="Koptisch Kruis">
+  <img src="cross.png" class="cross" alt="Koptisch kruis">
   <h1>Koptische Jongeren Utrecht</h1>
   <div class="tagline">Een plek van geloof en gemeenschap</div>
-  <div class="divider"></div>
+
+  <div class="hero-socials">
+    <a href="https://www.instagram.com/koptischejongerenutrecht" target="_blank">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg">
+    </a>
+    <a href="https://www.tiktok.com/@koptischejongerenutrecht" target="_blank">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/tiktok.svg">
+    </a>
+  </div>
 </div>
 
 <section>
-  <h2>Welkom</h2>
   <div class="card">
-    Wij zijn een gemeenschap van jongeren die samenkomen in geloof, verbondenheid en groei.
-    Vanuit de rijke Koptisch-Orthodoxe traditie zoeken wij verdieping, vriendschap
-    en een levende relatie met Christus.
+    Wij zijn een gemeenschap van jongeren die samenkomen in geloof,
+    verbondenheid en groei. Vanuit de rijke Koptisch-Orthodoxe traditie
+    zoeken wij verdieping, vriendschap en een levende relatie met Christus.
 
     <br><br>
 
     Iedere vrijdagavond om 19:00 uur beginnen wij met het Agpeya gebed,
-    gevolgd door een lezing. Na afloop is er ruimte om samen iets te eten,
-    elkaar beter te leren kennen en ontspannen samen te zijn.
-    Er wordt gepoold, tafeltennis gespeeld of samen een spel gespeeld.
+    gevolgd door een lezing. Na afloop is er ruimte voor ontmoeting,
+    gezelligheid en activiteiten.
   </div>
 
   <div class="quote">
     “Maar wie de HEER verwachten, putten nieuwe kracht.
-    Zij varen op met vleugels als arenden.”<br>
+    Zij varen op met vleugels als arenden.”
     — Jesaja 40:31
   </div>
 </section>
@@ -215,11 +195,6 @@ footer{
 <footer>
   © 2026 Koptische Jongeren Utrecht
 </footer>
-
-<div class="social-float">
-  <a href="https://www.instagram.com/koptischejongerenutrecht" target="_blank" class="instagram">IG</a>
-  <a href="https://www.tiktok.com/@koptischejongerenutrecht" target="_blank" class="tiktok">TT</a>
-</div>
 
 </body>
 </html>
