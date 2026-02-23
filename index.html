@@ -34,7 +34,7 @@ body{
   padding-bottom:120px;
 }
 
-/* NAV */
+/* HEADER */
 
 header{
   background:var(--navy);
@@ -55,6 +55,8 @@ header{
   color:white;
   font-weight:600;
 }
+
+/* DESKTOP NAV */
 
 nav{
   display:flex;
@@ -86,20 +88,26 @@ nav a:hover{
   margin:4px 0;
 }
 
-/* FULLSCREEN MENU */
+/* MOBILE MENU */
 
 .mobile-menu{
   position:fixed;
   inset:0;
-  background:#000;
+  background:var(--navy);
   display:flex;
   flex-direction:column;
   justify-content:center;
   align-items:center;
-  gap:28px;
+  gap:20px;
   transform:translateY(-100%);
-  transition:0.4s ease;
+  transition:0.35s ease;
   z-index:1500;
+}
+
+@media (prefers-color-scheme: dark){
+  .mobile-menu{
+    background:#000;
+  }
 }
 
 .mobile-menu.active{
@@ -109,10 +117,11 @@ nav a:hover{
 .mobile-menu a{
   color:white;
   text-decoration:none;
-  font-size:22px;
+  font-size:18px;
+  font-weight:500;
 }
 
-/* Responsive */
+/* RESPONSIVE */
 
 @media (max-width:900px){
   nav{ display:none; }
@@ -132,7 +141,7 @@ nav a:hover{
   position:absolute;
   background:url("logo.png") no-repeat center;
   background-size:320px;
-  opacity:0.07;
+  opacity:0.08;
   inset:0;
 }
 
@@ -166,7 +175,7 @@ nav a:hover{
 .social-float{
   position:fixed;
   right:25px;
-  bottom:90px;
+  bottom:60px;
   display:flex;
   flex-direction:column;
   gap:18px;
@@ -174,11 +183,11 @@ nav a:hover{
 }
 
 .social-float img{
-  width:42px;
-  height:42px;
+  width:40px;
+  height:40px;
   cursor:pointer;
   transition:0.2s ease;
-  filter:drop-shadow(0 3px 6px rgba(0,0,0,0.4));
+  filter:drop-shadow(0 4px 8px rgba(0,0,0,0.4));
 }
 
 .social-float img:hover{
@@ -340,10 +349,10 @@ Het is afgeleid van het Griekse woord <em>Aigyptios</em>.
 
 <div class="social-float">
   <a href="https://www.instagram.com/koptischejongerenutrecht" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png">
+    <img src="instagram.png">
   </a>
   <a href="https://www.tiktok.com/@koptischejongerenutrecht" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/TikTok_logo.png">
+    <img src="tiktok.png">
   </a>
 </div>
 
