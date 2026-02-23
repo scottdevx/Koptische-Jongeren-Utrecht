@@ -12,16 +12,14 @@
   --text:#1f1f1f;
   --navy:#0f213a;
   --gold:#b89b45;
-  --card:#ffffff;
 }
 
 @media (prefers-color-scheme: dark){
   :root{
-    --bg:#000000;
+    --bg:#000;
     --text:#f2f2f2;
-    --navy:#000000;
+    --navy:#000;
     --gold:#d4af37;
-    --card:#121212;
   }
 }
 
@@ -34,12 +32,13 @@ body{
   padding-bottom:120px;
 }
 
-/* NAVIGATION */
+/* NAV */
 
 header{
   background:var(--navy);
-  padding:16px 20px;
+  padding:18px 20px;
   position:relative;
+  z-index:2000;
 }
 
 .nav-container{
@@ -83,29 +82,39 @@ nav a:hover{
   width:25px;
   background:white;
   margin:4px 0;
-  transition:0.3s;
 }
 
+/* FULLSCREEN MENU */
+
+.mobile-menu{
+  position:fixed;
+  inset:0;
+  background:#000;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  gap:28px;
+  transform:translateY(-100%);
+  transition:0.4s ease;
+  z-index:1500;
+}
+
+.mobile-menu.active{
+  transform:translateY(0);
+}
+
+.mobile-menu a{
+  color:white;
+  text-decoration:none;
+  font-size:22px;
+}
+
+/* Responsive */
+
 @media (max-width:900px){
-  nav{
-    display:none;
-    flex-direction:column;
-    position:absolute;
-    top:65px;
-    right:0;
-    background:var(--navy);
-    width:100%;
-    text-align:center;
-    padding:20px 0;
-  }
-
-  nav.active{
-    display:flex;
-  }
-
-  .hamburger{
-    display:flex;
-  }
+  nav{ display:none; }
+  .hamburger{ display:flex; }
 }
 
 /* HERO */
@@ -113,7 +122,7 @@ nav a:hover{
 .hero{
   position:relative;
   text-align:center;
-  padding:110px 20px 160px;
+  padding:110px 20px 180px;
 }
 
 .hero::before{
@@ -122,17 +131,11 @@ nav a:hover{
   background:url("logo.png") no-repeat center;
   background-size:320px;
   opacity:0.07;
-  top:0;
-  left:0;
-  right:0;
-  bottom:0;
-  z-index:0;
+  inset:0;
 }
 
 @media (prefers-color-scheme: dark){
-  .hero::before{
-    opacity:0.12;
-  }
+  .hero::before{ opacity:0.12; }
 }
 
 .hero-content{
@@ -156,6 +159,29 @@ nav a:hover{
   color:var(--gold);
 }
 
+/* SOCIAL FLOAT */
+
+.social-float{
+  position:fixed;
+  right:25px;
+  bottom:150px;
+  display:flex;
+  flex-direction:column;
+  gap:22px;
+  z-index:1000;
+}
+
+.social-float img{
+  width:42px;
+  height:42px;
+  cursor:pointer;
+  transition:0.2s ease;
+}
+
+.social-float img:hover{
+  transform:scale(1.1);
+}
+
 /* CONTENT */
 
 section{
@@ -164,102 +190,13 @@ section{
   padding:70px 20px;
 }
 
-.card{
-  background:var(--card);
-  padding:40px;
-  border-radius:12px;
-  margin-bottom:40px;
-}
-
 .scripture{
   text-align:center;
-  font-size:17px;
+  font-size:16px;
   color:var(--gold);
   margin:50px auto;
   max-width:650px;
 }
-
-.wistjedat{
-  background:var(--card);
-  border-left:4px solid var(--gold);
-  padding:25px;
-  border-radius:8px;
-  max-width:700px;
-  margin:40px auto;
-}
-
-.expect{
-  text-align:center;
-  margin-top:60px;
-}
-
-.expect-grid{
-  display:flex;
-  justify-content:center;
-  gap:40px;
-  flex-wrap:wrap;
-}
-
-.expect-item{
-  max-width:230px;
-}
-
-/* SOCIAL FLOAT */
-
-.social-float{
-  position:fixed;
-  right:20px;
-  bottom:110px;
-  display:flex;
-  flex-direction:column;
-  gap:18px;
-  z-index:1000;
-}
-
-.social-float a{
-  width:50px;
-  height:50px;
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  background:white;
-  box-shadow:0 6px 16px rgba(0,0,0,0.18);
-  transition:transform 0.2s ease;
-}
-
-.social-float a:hover{
-  transform:scale(1.08);
-}
-
-.social-float img{
-  width:28px;
-  height:28px;
-}
-
-@media (prefers-color-scheme: dark){
-  .social-float a{
-    background:#1a1a1a;
-  }
-}
-
-@media (max-width:768px){
-  .social-float{
-    bottom:130px;
-  }
-
-  .social-float a{
-    width:44px;
-    height:44px;
-  }
-
-  .social-float img{
-    width:22px;
-    height:22px;
-  }
-}
-
-/* FOOTER */
 
 footer{
   text-align:center;
@@ -275,7 +212,6 @@ footer{
 
 <header>
 <div class="nav-container">
-
 <div class="logo-title">Koptische Jongeren Utrecht</div>
 
 <div class="hamburger" onclick="toggleMenu()">
@@ -284,7 +220,7 @@ footer{
 <span></span>
 </div>
 
-<nav id="nav-menu">
+<nav>
   <a href="index.html">Home</a>
   <a href="vrijdagavond.html">Vrijdagavond</a>
   <a href="liturgie.html">Heilige Liturgie</a>
@@ -294,9 +230,19 @@ footer{
   <a href="over-ons.html">Over ons</a>
   <a href="contact.html">Contact</a>
 </nav>
-
 </div>
 </header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Home</a>
+  <a href="vrijdagavond.html">Vrijdagavond</a>
+  <a href="liturgie.html">Heilige Liturgie</a>
+  <a href="activiteiten.html">Activiteiten</a>
+  <a href="kerkboeken.html">Kerkboeken</a>
+  <a href="galerij.html">Galerij</a>
+  <a href="over-ons.html">Over ons</a>
+  <a href="contact.html">Contact</a>
+</div>
 
 <div class="hero">
   <div class="hero-content">
@@ -308,47 +254,10 @@ footer{
 
 <section>
 
-<div class="card">
-<strong>Welkom op de website van Koptische Jongeren Utrecht.</strong><br><br>
-De jongerenbijeenkomst is opgericht in 2007 en is met Gods zegen door de jaren heen enorm gegroeid.
-Elke vrijdagavond om 19:00 uur komt onze jongerengroep samen voor gebed,
-verdieping en ontmoeting.
-</div>
-
 <div class="scripture">
 “Maar wie de HEER verwachten, putten nieuwe kracht;
 zij varen op met vleugels als arenden.”
 <br>— Jesaja 40:31
-</div>
-
-<div class="wistjedat">
-<strong>Wist je dat?</strong><br><br>
-Het woord “Kopt” oorspronkelijk “Egyptenaar” betekent?
-Het is afgeleid van het Griekse woord <em>Aigyptios</em>.
-</div>
-
-<div class="expect">
-<h2>Wat kun je verwachten?</h2>
-
-<div class="expect-grid">
-  <div class="expect-item">
-    <strong>Gebed</strong><br>
-    Het Agpeya-gebed, hymnes en gezamenlijke momenten van aanbidding.
-  </div>
-
-  <div class="expect-item">
-    <strong>Verdieping</strong><br>
-    Bijbelstudies, spirituele thema’s en gesprekken
-    over onderwerpen die jongeren vandaag bezighouden.
-  </div>
-
-  <div class="expect-item">
-    <strong>Gemeenschap</strong><br>
-    Ontmoeting, activiteiten, samen eten
-    en een omgeving waarin geloof en vriendschap samenkomen.
-  </div>
-</div>
-
 </div>
 
 </section>
@@ -359,16 +268,16 @@ Het is afgeleid van het Griekse woord <em>Aigyptios</em>.
 
 <div class="social-float">
   <a href="https://www.instagram.com/koptischejongerenutrecht" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png">
   </a>
   <a href="https://www.tiktok.com/@koptischejongerenutrecht" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/TikTok_logo.svg">
+    <img src="https://upload.wikimedia.org/wikipedia/en/a/a9/TikTok_logo.svg">
   </a>
 </div>
 
 <script>
 function toggleMenu(){
-  document.getElementById("nav-menu").classList.toggle("active");
+  document.getElementById("mobileMenu").classList.toggle("active");
 }
 </script>
 
