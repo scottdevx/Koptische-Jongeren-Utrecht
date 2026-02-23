@@ -68,14 +68,12 @@ nav a:hover{
   padding:110px 20px 80px;
 }
 
-/* Watermark jongerenlogo */
-
 .hero::before{
   content:"";
   position:absolute;
   background:url("logo.png") no-repeat center;
   background-size:320px;
-  opacity:0.04;
+  opacity:0.07;
   top:0;
   left:0;
   right:0;
@@ -102,7 +100,6 @@ nav a:hover{
 .hero h1{
   font-size:36px;
   margin:0;
-  letter-spacing:0.5px;
 }
 
 .tagline{
@@ -130,9 +127,7 @@ section{
 
 .scripture{
   text-align:center;
-  font-size:18px;
-  font-weight:400;
-  line-height:1.7;
+  font-size:17px;
   color:var(--gold);
   margin:50px auto;
   max-width:650px;
@@ -147,7 +142,29 @@ section{
   padding:25px;
   border-radius:8px;
   max-width:700px;
-  margin:40px auto 0;
+  margin:40px auto;
+}
+
+/* WAT KUN JE VERWACHTEN */
+
+.expect{
+  text-align:center;
+  margin-top:60px;
+}
+
+.expect h2{
+  margin-bottom:30px;
+}
+
+.expect-grid{
+  display:flex;
+  justify-content:center;
+  gap:40px;
+  flex-wrap:wrap;
+}
+
+.expect-item{
+  max-width:230px;
 }
 
 /* SOCIAL BUTTONS */
@@ -162,8 +179,8 @@ section{
 }
 
 .social-float a{
-  width:48px;
-  height:48px;
+  width:50px;
+  height:50px;
   border-radius:50%;
   display:flex;
   align-items:center;
@@ -207,8 +224,9 @@ footer{
 <nav>
   <a href="index.html">Home</a>
   <a href="vrijdagavond.html">Vrijdagavond</a>
-  <a href="diensten.html">Diensten</a>
+  <a href="liturgie.html">Heilige Liturgie</a>
   <a href="activiteiten.html">Activiteiten</a>
+  <a href="kerkboeken.html">Kerkboeken</a>
   <a href="galerij.html">Galerij</a>
   <a href="over-ons.html">Over ons</a>
   <a href="contact.html">Contact</a>
@@ -227,29 +245,47 @@ footer{
 
 <div class="card">
 <strong>Welkom op de website van Koptische Jongeren Utrecht.</strong><br><br>
-
 De jongerenbijeenkomst is opgericht in 2007 en is met Gods zegen door de jaren heen enorm gegroeid.
 Elke vrijdagavond om 19:00 uur komt onze jongerengroep samen voor gebed,
 verdieping en ontmoeting.
-
-<br><br>
-
-Onze bijeenkomsten zijn gericht op jongeren van 16+ met als doel samen te groeien naar God,
-sterker te worden in het geloof, van elkaar te leren en eenheid te creëren.
 </div>
 
 <div class="scripture">
 “Maar wie de HEER verwachten, putten nieuwe kracht;
 zij varen op met vleugels als arenden.”
-<br>
-— Jesaja 40:31
+<br>— Jesaja 40:31
 </div>
 
 <div class="wistjedat">
 <strong>Wist je dat?</strong><br><br>
 Het woord “Kopt” oorspronkelijk “Egyptenaar” betekent?
-Het is afgeleid van het Griekse woord <em>Aigyptios</em>
-en wordt vandaag nog steeds gebruikt voor de inheemse christenen van Egypte.
+Het is afgeleid van het Griekse woord <em>Aigyptios</em>.
+</div>
+
+<div class="expect">
+<h2>Wat kun je verwachten?</h2>
+
+<div class="expect-grid">
+
+  <div class="expect-item">
+    <strong>Gebed</strong><br>
+    Het Agpeya-gebed, hymnes en gezamenlijke momenten van aanbidding.
+  </div>
+
+  <div class="expect-item">
+    <strong>Verdieping</strong><br>
+    Bijbelstudies, theologische en spirituele onderwerpen,
+    praktische lessen en gesprekken over thema’s
+    waar jongeren vandaag mee te maken hebben.
+  </div>
+
+  <div class="expect-item">
+    <strong>Gemeenschap</strong><br>
+    Ontmoeting, activiteiten, samen eten
+    en een omgeving waarin geloof en vriendschap samenkomen.
+  </div>
+
+</div>
 </div>
 
 </section>
