@@ -1,6 +1,7 @@
 import Test from "./components/Test"
 
-// Tutorial: https://www.youtube.com/watch?v=SqcY0GlETPk
+// React Tutorial: https://www.youtube.com/watch?v=SqcY0GlETPk
+// Install tailwindCSS: https://tailwindcss.com/docs/installation/using-vite
 
 function App() {
  return <div><Test></Test></div> 
