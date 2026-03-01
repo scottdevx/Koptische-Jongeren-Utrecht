@@ -19,8 +19,12 @@ function Home() {
           <p className="text-2xl sm:text-3xl lg:text-4xl font-bold pb-3">{title}</p>
           <p className={`text-m sm:text-l lg:text-xl font-serif pb-8 ${text_color_accent}`}>{subtitle}</p>
           <p className="text-lg pb-8 w-full max-w-lg">{}</p>
-          <button className={`bg-transparent ${bg_color_accent_hover} ${text_color_accent} font-semibold hover:text-white py-3 px-6 border ${border_color_accent} hover:border-transparent rounded`}>
-            <Link to="/projects">Learn More</Link>
+          <button className={
+            `bg-transparent 
+            ${text_color_accent} font-semibold hover:text-white py-3 px-6 border
+            ${bg_color_accent_hover} hover:border-transparent rounded`
+            }>
+            <Link to="/about">Learn More</Link>
           </button>
         </div>
       </div>

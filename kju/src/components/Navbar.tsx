@@ -33,7 +33,7 @@ function Navbar() {
 
   return (
     <nav
-      className={`w-full h-16 flex sticky top-0 z-1 items-center justify-between ${bg_color_navbar} ${font_main}`}
+      className={`w-full h-16 flex sticky top-0 z-50 items-center justify-between ${bg_color_navbar} ${font_main}`}
     >
       <div className="flex-shrink-0 mr-auto pl-6">
         <img className="h-10 w-auto" src={logo} alt="" />
@@ -147,7 +147,7 @@ function Navbar() {
       {isOpen && (
         <ul
           ref={menuRef}
-          className={`lg:hidden absolute top-16 left-0 w-full ${bg_color_navbar} flex flex-col items-center space-y-4 py-4 ${text_color_main} z-50`}
+          className={`lg:hidden absolute top-16 left-0 w-full ${bg_color_navbar} flex flex-col items-center space-y-4 py-4 ${text_color_main}`}
         >
           <li>
             <Link
