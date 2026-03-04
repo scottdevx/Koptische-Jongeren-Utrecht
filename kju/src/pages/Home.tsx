@@ -1,4 +1,4 @@
-import { text_color_accent, border_color_accent, bg_color_accent_hover, lorem } from "./Layout";
+import { text_color_accent, text_color_main, border_color_accent, bg_color_accent_hover, lorem } from "./Layout";
 import { Link } from "react-router-dom";
 import VersCard from "../components/Vers";
 import cross from '../assets/cross.png';

@@ -6,7 +6,7 @@ import Footer from "../components/Footer";
 export const bg_color = "bg-[#000000]";
 export const bg_color_accent = "bg-[#ffbf00]";
 export const bg_color_accent_alpha = "bg-[#ffbf0020]";
-export const bg_color_accent_hover = `hover:${bg_color_accent}`;
+export const bg_color_accent_hover = `hover:bg-[#ffbf00]`;
 
 export const bg_color_navbar = bg_color;
 export const bg_color_footer = bg_color;

@@ -3,6 +3,9 @@ import { Link, useLocation } from "react-router-dom";
 import logo from "../assets/logo.png";
 import { font_main, text_color_main, text_color_accent, bg_color_navbar } from "../pages/Layout";
 
+const matt_18_20 = "Mattheüs 18:20"
+const matt_18_20_body = "Want waar twee of drie in Mijn Naam bijeengekomen zijn,\n daar ben Ik in hun midden."
+
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const menuRef = useRef<HTMLUListElement | null>(null);
@@ -36,8 +39,14 @@ function Navbar() {
       className={`w-full h-16 flex sticky top-0 z-50 items-center justify-between ${bg_color_navbar} ${font_main}`}
     >
       <div className="flex-shrink-0 mr-auto pl-6">
-        <img className="h-10 w-auto" src={logo} alt="" />
+        <Link to="/">
+          <img className="h-10 w-auto" src={logo} alt="Logo" />
+        </Link>
       </div>
+      {/* <div className={`${text_color_main} flex-shrink-0 mr-auto pl-6`}>
+        <p>{matt_18_20}</p>
+        <p>{matt_18_20_body}</p>
+      </div> */}
       <ul
         className={`hidden lg:flex flex-grow justify-center space-x-4 gap-x-15 ${text_color_main} ${
           !isOpen ? "active" : ""
