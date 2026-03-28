@@ -35,9 +35,10 @@ function Contact() {
             <h1>Email:</h1>
             <div className="flex items-center gap-2">
               <span className={`${text_color_accent}`}>-</span>
-              <a href={email} className="hover:underline">{email}</a>
+              <a href={`mailto:${email}`} className="hover:underline">
+                {email}
+              </a>
             </div>
-
           </div>
 
           <p className="text-lg w-full">Link naar onze socials:</p>
