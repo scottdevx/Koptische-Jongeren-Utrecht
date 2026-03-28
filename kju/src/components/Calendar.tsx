@@ -16,17 +16,25 @@ type CalendarProps = {
 function Calendar(props: CalendarProps) {
   const events = props.events
 
+  {/* Andere optie: iframe */}
   return (
-    <FullCalendar
-      plugins={[dayGridPlugin, interactionPlugin]}
-      initialView="dayGridMonth"
-      locale={nlLocale}
-      events={events}
-      aspectRatio={1.0}
-      dateClick={(info) => {
-        alert(`Clicked date: ${info.dateStr}`);
-      }}
-    />
+    <div className="w-full h-[80vh]">
+        <iframe
+            src="https://outlook.office365.com/calendar/published/f0a13193155143e5b777f4f000df15c5@papakyrillous.nl/aa87688d2b944820b86f8d23a9adb8dc13118198828885950745/calendar.html"
+            className="w-full h-full border-0"
+            title="Outlook Calendar"
+        ></iframe>
+    </div>
+    // <FullCalendar
+    //   plugins={[dayGridPlugin, interactionPlugin]}
+    //   initialView="dayGridMonth"
+    //   locale={nlLocale}
+    //   events={events}
+    //   aspectRatio={1.0}
+    //   dateClick={(info) => {
+    //     alert(`Clicked date: ${info.dateStr}`);
+    //   }}
+    // />
   );
 };
 
