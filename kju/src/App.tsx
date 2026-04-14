@@ -12,6 +12,7 @@ import About from "./pages/About";
 import Vrijdagavond from "./pages/Vrijdagavond";
 import Gallerij from "./pages/Gallerij";
 import Liturgie from "./pages/Liturgie";
+import Kerkboeken from "./pages/Kerkboeken";
 import {Activiteiten} from "./pages/Activiteiten";
 import { ActiviteitenHome } from "./pages/Activiteiten";
 import ActiviteitInschrijven from "./pages/ActInschrijf";
@@ -25,14 +26,14 @@ function App() {
           <Route path="contact" element={<Contact />} />
           <Route path="about" element={<About />} />
           <Route path="vrijdagavond" element={<Vrijdagavond />} />
-          <Route path="gallerij" element={<Gallerij />} />
           <Route path="liturgie" element={<Liturgie />} />
-
+          <Route path="kerkboeken" element={<Kerkboeken />} />
+          <Route path="gallerij" element={<Gallerij />} />
+          <Route path="*" element={<Home />} />
           <Route path="activiteiten" element={<Activiteiten />} >
             <Route index element={<ActiviteitenHome />} />
             <Route path="inschrijven" element={<ActiviteitInschrijven />} />
           </Route>
-          <Route path="*" element={<Home />} />
         </Route>
       </Routes>
     </BrowserRouter>

@@ -96,6 +96,18 @@ function Navbar() {
           </Link>
         </li>
 
+        
+        <li>
+          <Link
+            to="/kerkboeken"
+            className={`hover:font-bold flex items-center space-x-3  ${
+              location.pathname === "/kerkboeken" ? text_color_accent : ""
+            }`}
+          >
+            <span>Kerkboeken</span>
+          </Link>
+        </li>
+
         <li>
           <Link
             to="/gallerij"
@@ -203,6 +215,18 @@ function Navbar() {
               }`}
             >
               Liturgie
+            </Link>
+          </li>
+
+          <li>
+            <Link
+              to="/kerkboeken"
+              onClick={closeMenu}
+              className={`hover:font-bold ${
+                location.pathname === "/kerkboeken" ? text_color_accent : ""
+              }`}
+            >
+              Kerkboeken
             </Link>
           </li>
 
